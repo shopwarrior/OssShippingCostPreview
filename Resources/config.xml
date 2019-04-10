@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.3/engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+
+        <element type="select" required="true" scope="shop">
+            <name>country</name>
+            <label lang="de">Predefined Country</label>
+            <label lang="en">Predefined Country</label>
+            <value>2</value>
+            <description lang="de">Shopware will use this country as default in case customer did not fill his shipping address.</description>
+            <description lang="en">Shopware will use this country as default in case customer did not fill his shipping address.</description>
+            <store>Shopware.apps.Base.store.Country</store>
+        </element>
+
+        <element type="select" required="true" scope="shop">
+            <name>dispatch</name>
+            <label lang="de">Predefined Shipping Method</label>
+            <label lang="en">Predefined Shipping Method</label>
+            <value>9</value>
+            <description lang="de">Shopware will use this shipping as default in case customer did not fill his shipping address.</description>
+            <description lang="en">Shopware will use this shipping as default in case customer did not fill his shipping address.</description>
+            <store>Shopware.apps.Base.store.Dispatch</store>
+        </element>
+
+        <element type="select" required="true" scope="shop">
+            <name>payment</name>
+            <label lang="de">Payment Method</label>
+            <label lang="en">Payment Method</label>
+            <value>5</value>
+            <description lang="de">Shopware will use this payment as default in case customer did not select payment method.</description>
+            <description lang="en">Shopware will use this payment as default in case customer did not select payment method.</description>
+            <store>Shopware.apps.Base.store.Payment</store>
+            <options>
+                <multiSelect>false</multiSelect>
+                <valueField>id</valueField>
+                <displayField>description</displayField>
+            </options>
+        </element>
+
+    </elements>
+</config>
